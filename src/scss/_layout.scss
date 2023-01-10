@@ -1,0 +1,35 @@
+header{
+  width:100vw;
+  height: 3.5rem;
+@include flex-box(flex, space-between, center);
+  font-family: 'Helvetica','Arial','sans-serif';
+  font-size: 2rem;
+}
+.speaker {
+  @include flex-box(flex, space-between, center);
+  @include box(25rem, 100%);
+
+}
+nav{
+  @include flex-box(flex, space-around, center);
+  @include box(20vw, 100%);
+
+  ul{
+    @include flex-box(flex, space-around, center);
+    @include box(0, 100%);
+    list-style-type: none;
+
+    li{
+      @include box(2rem0, 100%);
+
+
+
+      a{
+        text-decoration:none;
+        @include box(100%, 100%);
+        @include flex-box(flex, center, center);
+        color: map-get($my-color, "color-text");
+        margin:5px;
+      }
+    }
+  }}

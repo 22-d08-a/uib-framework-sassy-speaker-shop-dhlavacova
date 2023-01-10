@@ -1,0 +1,28 @@
+@import 'variable';
+@import "mixins";
+@import "reset";
+@import 'layout';
+@import 'capitel';
+
+a {
+  &.button{
+
+    display: inline-block;
+    background-color: map-get($my-color, color-button);
+    color:map-get($my-color, color-button-text);
+    text-transform:uppercase;
+    font-size: 1.5rem;
+    font-stretch: ultra-condensed;
+    text-decoration: none;
+    padding: 20px;
+  }
+
+  &:after {
+    content: "►";
+  }
+  img{
+
+  }
+}
+
+

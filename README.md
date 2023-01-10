@@ -12,6 +12,6 @@ Recreate the speaker-shop website, this time utilising sass and mixins. Make use
 
 ### Design mock-up
 
-![design](./images/mockup.png)
+![design](src/images/mockup.png)
 
 Font: _Work Sans_ from **Google Fonts**

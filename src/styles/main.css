@@ -1,0 +1,81 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", "Arial", "sans-serif";
+}
+
+header {
+  width: 100vw;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  font-family: "Helvetica", "Arial", "sans-serif";
+  font-size: 2rem;
+}
+
+.speaker {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 25rem;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  width: 20vw;
+  height: 100%;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  width: 0;
+  height: 100%;
+  list-style-type: none;
+}
+nav ul li {
+  width: 2rem0;
+  height: 100%;
+}
+nav ul li a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: blue;
+  margin: 5px;
+}
+
+.hero h1 {
+  margin-top: 80px;
+  font-size: 3rem;
+}
+.hero .intro {
+  margin-top: 50px;
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+a.button {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-stretch: ultra-condensed;
+  text-decoration: none;
+  padding: 20px;
+}
+a:after {
+  content: "►";
+}
+
+/*# sourceMappingURL=main.css.map */

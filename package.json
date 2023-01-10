@@ -1,0 +1,37 @@
+{
+  "name": "uib-framework-sassy-speaker-shop-dhlavacova",
+  "version": "1.0.0",
+  "description": "Recreate the speaker-shop website, this time utilising sass and mixins. Make use of the boilerplate code in the index.html and the assets in the images folder.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run-p watch watch:styles",
+    "build": "run-s clean clean:styles build:styles copy",
+    "deploy": "run-s build publish",
+    "build:styles": "sass src/scss:src/styles",
+    "watch": "live-server src",
+    "watch:styles": "sass src/scss:src/styles --watch",
+    "clean": "rm -rf dist",
+    "clean:styles": "rm -rf src/styles",
+    "copy": "mkdir dist && rsync -avr --exclude=\"/scss\" src/ dist",
+    "publish": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/22-d08-a/uib-framework-sassy-speaker-shop-dhlavacova.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/22-d08-a/uib-framework-sassy-speaker-shop-dhlavacova/issues"
+  },
+  "homepage": "https://github.com/22-d08-a/uib-framework-sassy-speaker-shop-dhlavacova#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "pg-git": "^1.3.5",
+    "sass": "^1.57.1"
+  }
+}
