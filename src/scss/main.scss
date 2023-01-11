@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap');
 @import 'variable';
 @import "mixins";
 @import "reset";
 @import 'layout';
 @import 'capitel';
-
+.hero{
 a {
   &.button{
 
@@ -21,23 +22,38 @@ a {
   &:after {
     content: "►";
   }
-  }
+  }}
 .cards {
-  height: 50rem;
-  width: 100%;
-  @include flex-box(flex,space-between, center);
 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 3rem;
+  justify-content: center;
   a{
-    width:50em;
+    width:35rem;
+    height: 40rem;
     color:map-get($my-color, color-button-text);
     text-decoration: none;
     text-shadow: -7px -2px 37px rgba(0,0,0,0.6);
         h2{
       position:relative;
-      top:200px;
-      padding-left:50px;
+      top:50px;
+      left:20px;
       font-size: 3rem;
           width: 30rem;
+    }
+    img{
+        position: relative;
+        top:100px;
+        left:20px;
+      background-color: white;
+      border-radius:50%;
+      box-shadow: 0px 0px 0px 15px rgba(255, 255, 255, 30%);
+      height:2rem;
+      &:hover {
+        box-shadow: 0px 0px 0px 15px rgba(255, 255, 255, 50%);
+      }
     }
   .article-1 {
     background-image: url("../images/white-box.jpg");
@@ -45,24 +61,45 @@ a {
     background-repeat: no-repeat;
     @include box(100%,100%);
     background-size: cover;
+    padding: 8rem 2rem;
+
+    }
 
 
-  }}
+  }
   a{
     .article-2{
       @extend .article-1;
       background-image: url("../images/room.jpg");
-      grid-area: room;
+      background-position: left;
     }
   }
   a{
     .article-3{
       @extend .article-1;
       background-image: url("../images/black-white.jpg");
-      grid-area: black-white;
+
+
     }
   }
+}
 
 
-
+@media (max-width: 720px) {
+ /* header {
+    flex-direction: column;
+    align-items: flex-start;
+    div {
+      margin-left: 0.9rem;
+    }
+  }*/
+  .cards{
+    a .article-1,  a .article-2, a .article-3{
+flex:100%;
+    }
+  }
+}
+footer{
+  @include flex-box(flex, center, center);
+  margin-top:200px;
 }

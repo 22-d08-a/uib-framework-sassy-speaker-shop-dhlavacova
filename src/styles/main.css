@@ -1,13 +1,15 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Helvetica", "Arial", "sans-serif";
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
 }
 
 body {
-  margin-left: 20px;
+  margin: 20px;
 }
 
 header {
@@ -17,7 +19,6 @@ header {
   justify-content: space-between;
   align-content: center;
   font-family: "Helvetica", "Arial", "sans-serif";
-  font-size: 2rem;
 }
 
 .speaker {
@@ -56,6 +57,7 @@ nav ul li a {
   align-content: center;
   color: blue;
   margin: 5px;
+  font-size: 2rem;
 }
 
 .hero h1 {
@@ -64,11 +66,10 @@ nav ul li a {
 }
 .hero .intro {
   margin-top: 50px;
-  font-weight: lighter;
   font-size: 2rem;
 }
 
-a.button {
+.hero a.button {
   margin: 50px 0 50px 0;
   display: inline-block;
   background-color: black;
@@ -79,29 +80,42 @@ a.button {
   text-decoration: none;
   padding: 20px;
 }
-a:after {
+.hero a:after {
   content: "►";
 }
 
 .cards {
-  height: 50rem;
-  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 3rem;
+  justify-content: center;
 }
 .cards a {
-  width: 50em;
+  width: 35rem;
+  height: 40rem;
   color: white;
   text-decoration: none;
   text-shadow: -7px -2px 37px rgba(0, 0, 0, 0.6);
 }
 .cards a h2 {
   position: relative;
-  top: 200px;
-  padding-left: 50px;
+  top: 50px;
+  left: 20px;
   font-size: 3rem;
   width: 30rem;
+}
+.cards a img {
+  position: relative;
+  top: 100px;
+  left: 20px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 15px rgba(255, 255, 255, 0.3);
+  height: 2rem;
+}
+.cards a img:hover {
+  box-shadow: 0px 0px 0px 15px rgba(255, 255, 255, 0.5);
 }
 .cards a .article-1, .cards a .article-3, .cards a .article-2 {
   background-image: url("../images/white-box.jpg");
@@ -110,14 +124,33 @@ a:after {
   width: 100%;
   height: 100%;
   background-size: cover;
+  padding: 8rem 2rem;
 }
 .cards a .article-2 {
   background-image: url("../images/room.jpg");
-  grid-area: room;
+  background-position: left;
 }
 .cards a .article-3 {
   background-image: url("../images/black-white.jpg");
-  grid-area: black-white;
+}
+
+@media (max-width: 720px) {
+  /* header {
+     flex-direction: column;
+     align-items: flex-start;
+     div {
+       margin-left: 0.9rem;
+     }
+   }*/
+  .cards a .article-1, .cards a .article-2, .cards a .article-3 {
+    flex: 100%;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 200px;
 }
 
 /*# sourceMappingURL=main.css.map */

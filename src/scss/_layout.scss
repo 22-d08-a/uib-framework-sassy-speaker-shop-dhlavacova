@@ -1,12 +1,13 @@
 body{
-  margin-left: 20px;
+  margin: 20px;
+
 }
 header{
   width:100vw;
   height: 3.5rem;
 @include flex-box(flex, space-between, center);
   font-family: 'Helvetica','Arial','sans-serif';
-  font-size: 2rem;
+
 }
 .speaker {
   @include flex-box(flex, space-between, center);
@@ -33,6 +34,8 @@ nav{
         @include flex-box(flex, center, center);
         color: map-get($my-color, "color-text");
         margin:5px;
+        font-size: 2rem;
+
       }
     }
   }}
