@@ -7,6 +7,7 @@
 a {
   &.button{
 
+    margin:50px 0 50px 0;
     display: inline-block;
     background-color: map-get($my-color, color-button);
     color:map-get($my-color, color-button-text);
@@ -20,9 +21,48 @@ a {
   &:after {
     content: "►";
   }
-  img{
-
   }
+.cards {
+  height: 50rem;
+  width: 100%;
+  @include flex-box(flex,space-between, center);
+
+  a{
+    width:50em;
+    color:map-get($my-color, color-button-text);
+    text-decoration: none;
+    text-shadow: -7px -2px 37px rgba(0,0,0,0.6);
+        h2{
+      position:relative;
+      top:200px;
+      padding-left:50px;
+      font-size: 3rem;
+          width: 30rem;
+    }
+  .article-1 {
+    background-image: url("../images/white-box.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    @include box(100%,100%);
+    background-size: cover;
+
+
+  }}
+  a{
+    .article-2{
+      @extend .article-1;
+      background-image: url("../images/room.jpg");
+      grid-area: room;
+    }
+  }
+  a{
+    .article-3{
+      @extend .article-1;
+      background-image: url("../images/black-white.jpg");
+      grid-area: black-white;
+    }
+  }
+
+
+
 }
-
-
